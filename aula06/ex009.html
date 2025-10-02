@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightblue;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.5em;
+            font-weight: bold;
+        
+        }
+        h1{
+            color: darkorchid;
+            text-shadow: 1px 1px 2px orange;
+        }
+
+        input{
+            width: 120px;
+            height: 18px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        input#id{
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        button{
+            width: 120px;
+            height: 60px;
+            background-color: rgb(32, 202, 145);
+            border-radius: 12px;
+        }
+        button:hover{
+            background-color: rgb(12, 138, 99);
+            color: white;
+            cursor: pointer;
+        }
+        button:active{
+            background-color: rgb(3, 73, 52);
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 4</h1>
+    <label for="name">Digite seu nome aqui :</label>
+    <input type="text" id="name" placeholder="Seu nome">
+    <br>   
+    <button id="btn-exibir" onclick="exibir_nome()">Exibir nome</button>
+    <script src="Ex_js/Ex009.js"></script>
+</body>
+</html>

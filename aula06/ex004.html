@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+       body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        background-color: lightblue;
+       }
+       
+       div{
+        background-color: rgb(19, 118, 163);
+        border-radius: 8px;
+        height: 75px;
+        margin: 0px auto;
+       }
+       
+   </style>
+</head>
+<body>
+    <div>
+        <script>
+            var nome = prompt('Qual é o seu nome ?')
+            document.write(`Olá, ${nome}, seja bem vindo!<br>`)
+            document.write(`Seu nome tem ${nome.length} letras. <br>`)
+            document.write(`Olá, ${nome.toUpperCase()}, seja bem vindo!<br>`)
+            document.write(`Olá, ${nome.toLowerCase()}, seja bem vindo!<br>`)
+        </script>
+    </div>
+</body>
+</html>
