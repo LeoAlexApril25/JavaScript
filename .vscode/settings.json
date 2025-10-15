@@ -1,3 +1,17 @@
 {
-    "livePreview.defaultPreviewPath": "/Exercicios_Guanabara/Ex001.html"
+    "livePreview.defaultPreviewPath": "/Exercicios_Guanabara/Ex001.html",
+    // Enable quick suggestions (typing should show suggestions)
+    "editor.quickSuggestions": { "other": true, "comments": false, "strings": true },
+    // Parameter hints when typing function calls (Ctrl+Shift+Space)
+    "editor.parameterHints.enabled": true,
+    // Trigger suggestions on characters like '.'
+    "editor.suggestOnTriggerCharacters": true,
+    // Inline suggestions and suggestion details
+    "editor.inlineSuggest.enabled": true,
+    "editor.suggest.showWords": true,
+    // JavaScript / TypeScript specific suggestions
+    "javascript.suggest.enabled": true,
+    "javascript.suggest.completeFunctionCalls": true,
+    "javascript.suggestionActions.enabled": true,
+    "typescript.suggest.enabled": true
 }

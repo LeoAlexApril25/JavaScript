@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Jogo de Adivinhação
+    </h1>
+
+    <p class="palpite"></p>
+    <p class="ultimoResultado"></p>
+    <p class="baixoOuAlto"></p>
+
+    <label for="CampoPalpite"> Digite o seu palpite: </label>
+    <input type="text" class="CampoPalpite" id="CampoPalpite">
+    <input type="submit" value="Enviar Palpite" class="EnviarPalpite">
+
+
+    <script>
+        let numeroAleatorio = Math.floor(Math.random() * 100) + 1; // Gera um número aleatório entre 1 e 100
+
+        let palpite = dococument.querySelector('.palpite');
+        let ultimoResultando = document.querySelector('.ultimoResultado');
+        let baixoOuAlto = document.querySelector('.baixoOuAlto');
+
+        let EnviarPalpite = documentquerySelector('.EnviarPalpite');
+        let CampoPalpite = document.querySelector('.CampoPalpite');
+
+        let ContagemPalpites = 1;
+        let botaoReinicio;
+
+        function ConferirPalpite(){
+            let palpiteUsuario = Number(CampoPalpite.value);
+            if(ContagemPalpites ===1){
+                palpite.textContent = 'Palpites Anteriores: ';
+                
+            }
+
+            palpite.textContent += palpiteUsuario + ' ';
+
+            if(palpiteUsuario === numeroAleatorio){ // Usuário acertou o número
+                ultimoResultando.textContent = 'Parabéns! Você acertou!'; // Mensagem de acerto
+                ultimoResutado.style.backgroundColor = 'green'; // Muda a cor de fundo para verde
+                baixoOuAlto.textContent = ''; // Limpa a mensagem de baixo ou alto
+                configFimDeJogo(); // Função para configurar o fim do jogo
+                
+            } 
+
+            else if(ContagemPalpites ===100){
+                ultimoResultando.textContent = '!!!Fim de Jogo !!!';
+                baixoOuAlto.textContent = '';
+                configFimDeJogo();
+            }
+
+            contagemPalpites++;
+            CampoPalpite.value = '';
+            CampoPalpite.focus();
+        }
+
+    </script>
+    
+</body>
+</html>
