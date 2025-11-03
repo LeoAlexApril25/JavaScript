@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="inicio"></p>
+    <p class="dobro"></p>
+    <p class="terco"></p>
+
+    <script>
+        let numero = Number.parseFloat(prompt("Digite o número :"))
+        document.querySelector(".inicio").innerHTML = " Digite o numero : " + numero + "."
+        let dobro = numero * 2
+        document.querySelector(".dobro").innerHTML = " O dobro de " + numero + " é " + dobro + "."
+        let terco = numero / 3
+        document.querySelector(".terco").innerHTML = " O terço de " + numero + " é " + terco + "."
+
+    </script>
+    
+</body>
+</html>

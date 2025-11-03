@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="nota1"></p>
+    <p class="nota2"></p>
+    <p class="resultando"></p>
+
+    <script>
+        let nota1 = Number.parseFloat(prompt("Nota 1:"))
+        document.querySelector(".nota1").innerHTML = "Nota 1 :" + nota1 + "."
+        let nota2 = Number.parseFloat(prompt("Nota 2:"))
+         document.querySelector(".nota2").innerHTML = "Nota 2 :" + nota2 + "."
+        let media = (nota1 + nota2) / 2
+        document.querySelector(".resultando").innerHTML = "A média entre " + nota1 + " e " + nota2 + " é igual a " + media + "."
+    </script>
+    
+</body>
+</html>

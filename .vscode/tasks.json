@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Node REPL",
+      "type": "shell",
+      "command": "node",
+      "presentation": {
+        "panel": "dedicated",
+        "echo": true,
+        "reveal": "always",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run current JS file",
+      "type": "shell",
+      "command": "node \"${file}\"",
+      "presentation": {
+        "panel": "dedicated",
+        "echo": true,
+        "reveal": "always",
+        "focus": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}

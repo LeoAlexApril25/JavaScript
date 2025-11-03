@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="soma1"></p>
+    <p class="soma2"></p>
+    <p class="ultimoResultando"></p>
+
+    <script>
+        let numero1 = Number.parseInt(prompt("Informe o primeiro Número ?"))
+        if (numero1 > 0){
+        document.querySelector(".soma1").innerHTML = "Digite um valor = " + numero1 + " ."}
+        
+        else{
+            document.querySelector(".soma1").innerHTML = "Tente novamente"
+        }
+        let numero2 = Number.parseInt(prompt("Informe o segundo Número ?"))
+        if (numero2 > 0){
+        document.querySelector(".soma2").innerHTML = "Digite um valor = " + numero2 + " ."
+        }
+          else{
+            document.querySelector(".soma2").innerHTML = "Tente novamente"
+        }
+
+
+        if ( numero1 > 0 || numero2 > 0) {
+        let resultado = numero1 + numero2
+        document.querySelector(".ultimoResultando").innerHTML = "A soma entre " + numero1 + " e " + numero2 + " é igual a "  + resultado + " ."
+        }
+
+        
+    </script>
+    
+</body>
+</html>

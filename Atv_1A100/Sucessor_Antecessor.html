@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="atual"></p>
+    <p class="antecessor"></p>
+    <p class="sucessor"></p>
+
+    <script>
+        let numero = Number.parseInt(prompt("Digite um número :"))
+        document.querySelector(".atual").innerHTML = "Digite o número: " + numero + "."
+        let antecessor = numero - 1
+        document.querySelector('.antecessor').innerHTML = "O antecesor de " + numero + " é " + antecessor + "."
+        let sucessor = numero + 1
+        document.querySelector('.sucessor').innerHTML = "O sucessor de " + numero + " é " + sucessor + '. '
+
+    </script>
+
+    
+</body>
+</html>

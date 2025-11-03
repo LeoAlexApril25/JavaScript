@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p class="nome"></p>
+    <p class="salario"></p>
+    <p class="texto"></p>
+    <script>
+        let nome = String(prompt("Qual é o nome do funcionário ?"))
+        document.querySelector(".nome").innerHTML = "Nome do funcionário: " + nome + "."
+        let salario = Number.parseFloat(prompt("Qual é o seu salário ?"))
+        document.querySelector(".salario").innerHTML = "Salário: " + salario + "."
+        document.querySelector(".texto").innerHTML = "O funcionário " +  nome + " tem um salário " + salario + " em Junho."
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="largura"></p>
+    <p class="altura"></p>
+    <p class="area"></p>
+    <p class="qtd_tinta"></p>
+
+    <script>
+        let largura = Number.parseFloat(prompt("Digite a largura da parede em metros:"));
+        let altura = Number.parseFloat(prompt("Digite a altura da parede em metros:"));
+        let area = largura * altura;
+        let qtd_tinta = area / 2;
+
+        document.querySelector(".largura").innerHTML = " A largura da parede é : " + largura.toFixed(2) + " metros.";
+        document.querySelector(".altura").innerHTML = " A altura da parede é : " + altura.toFixed(2) + " metros.";
+        document.querySelector(".area").innerHTML = " A área da parede é : " + area.toFixed(2) + " metros quadrados.";
+        document.querySelector(".qtd_tinta").innerHTML = " A quantidade de tinta necessária para pintar a parede é : " + qtd_tinta.toFixed(2) + " litros.";
+
+        document.body.style.textAlign = "center";
+        document.body.style.fontSize = "20px";
+        
+    </script>
+    
+</body>
+</html>

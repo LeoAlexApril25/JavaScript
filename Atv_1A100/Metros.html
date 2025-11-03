@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="metros"></p>
+    <p class="Km"></p>
+    <p class="Hm"></p>
+    <p class="Dam"></p>
+    <p class="dm"></p>
+    <p class="cm"></p>
+    <p class="mm"></p>
+
+    <script>
+        let metros = Number.parseFloat(prompt("Digite o valor em metros :"))
+        document.querySelector(".metros").innerHTML = " O valor digitado em metros é : " + metros + " m."
+        let Km = metros / 100
+        document.querySelector(".Km"). innerHTML = " O valor em quilômetros é : " + Km + " Km."
+
+        let Hm = metros / 10
+        document.querySelector(".Hm"). innerHTML = " O valor emhectômetros é : " + Hm + " Hm." 
+        let Dam = metros / 1
+        document.querySelector(".Dam"). innerHTML = " O valor em decâmetros é : " + Dam + " Dam."
+        let dm = metros * 10
+        document.querySelector(".dm"). innerHTML = " O valor em decímetros é : " + dm + " dm."
+        let cm = metros * 100
+        document.querySelector(".cm"). innerHTML = " O valor em centímetros é : " + cm + " cm."
+        let mm = metros * 1000
+        document.querySelector(".mm"). innerHTML = " O valor em milímetros é : " + mm + " mm."
+        
+       
+        document.body.style.textAlign = "center" 
+        document.body.style.fontSize = "20px"
+        document.body.style.fontFamily = "Arial, Helvetica, sans-serif"
+        document.body.style.backgroundColor = "#f0f8ff"
+        document.body.style.paddingTop = "50px"
+        
+    </script>
+    
+</body>
+</html>

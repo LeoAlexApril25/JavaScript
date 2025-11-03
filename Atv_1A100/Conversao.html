@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="Carteira"></p>
+    <p class="Real"></p>
+    <p class="Dolares"></p>
+
+    <script>
+        let valorEmReais = Number.parseFloat(prompt("Digite o valor em Reais (R$):"));
+        let valorEmDolares = valorEmReais / 5.25; // Supondo uma taxa de câmbio de 1 USD = 5.25 BRL
+
+        document.querySelector(".Carteira").innerHTML = " O valor digitado na carteira é : R$ " + valorEmReais.toFixed(2) + ".";
+        document.querySelector(".Real").innerHTML = " O valor em Reais é : R$ " + valorEmReais.toFixed(2) + ".";
+        document.querySelector(".Dolares").innerHTML = " O valor em Dólares é : $ " + valorEmDolares.toFixed(2) + ".";
+
+        document.body.style.textAlign = "center";
+        document.body.style.fontSize = "20px"; 
+        document.body.style.fontFamily = "Arial, Helvetica, sans-serif";
+    </script>
+
+    
+</body>
+</html>
