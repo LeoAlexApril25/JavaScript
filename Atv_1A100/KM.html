@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercicio 14</h1>
+    <p class="Qtd_Km"></p>
+    <p class="Qtd_dias"></p>
+    <p class="Preço_Pagar"></p>
+
+    <script>
+        let Qtd_km = Number.parseFloat(prompt("Informe a quantidade de km percorridos :"))
+        let Total_KmP = Qtd_km * 0.20
+        document.getElementsByClassName("Qtd_Km")[0].innerHTML = "A quantidade percorrida por Km foi " + Qtd_km + " Km.<br>" +
+        "Custo dessa viagem foi de R$ " + Total_KmP.toFixed(2) + " por cada Km.";
+
+        let Qtd_dias =  Number.parseInt(prompt("Informe a quantidade de dias que ficou com o carro: "))
+        let Total_diasC = Qtd_dias * 90
+
+        document.getElementsByClassName("Qtd_dias")[0].innerHTML =
+        `Ficou com o carro por ${Qtd_dias} dias.<br>Custo total por dias: R$ ${Total_diasC.toFixed(2)}.`;
+
+        let Total_Pagar = Total_KmP + Total_diasC
+        document.getElementsByClassName("Preço_Pagar")[0].innerHTML =
+      `<strong>O preço total a pagar é de: R$ ${Total_Pagar.toFixed(2)}</strong>`;
+    </script>
+    
+</body>
+</html>

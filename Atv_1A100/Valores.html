@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>Exercicio 11</h1>
+    <p class="A"></p>
+    <p class="B"></p>
+    <p class="C"></p>
+    <p class="delta"></p>
+
+    <script>
+        let A = Number.parseFloat(prompt("Digite o valor de A:"));
+        let B = Number.parseFloat(prompt(" Digite o valor de B:"));
+        let C = Number.parseFloat(prompt(" Digiteo valor de C :"));
+        
+        let delta = (B * B) - 4 * A * C;
+
+        document.querySelector(".A"). innerHTML = " O valor de A é : " + A.toFixed(2) + ".";
+        document.querySelector(".B"). innerHTML = " O valor de B é : " + B.toFixed(2) + ".";
+        document.querySelector(".C"). innerHTML = " O valor de C é : " + C.toFixed(2) + ".";
+        document.querySelector(".delta"). innerHTML = " O valor de Delta é : " + delta.toFixed(2) + ".";
+
+        document.body.style.textAlign = "center";
+        document.body.style.fontSize = "20px";
+
+    </script>
+</body>
+</html>

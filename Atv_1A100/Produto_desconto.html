@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Exercicio 12</h1>
+    <p class="preco"></p>
+    <p class="desconto"></p>
+    <p class="valor_d"></p>
+    <p class="preco_promocional"></p>
+    
+    <script>
+        let preco = parseFloat(prompt("Digite o preço do produto:"));
+        document.querySelector(".preco").innerHTML = `Preço do produto: R$ ${preco.toFixed(2)}`;
+
+        let desconto = 5
+        document.querySelector(".desconto").innerHTML = `O desconto do produto: R$ ${desconto.toFixed(2)}`;
+
+        let valor_d = preco * 5 / 100
+        document.querySelector(".valor_d").innerHTML =  `O valor do desconto do produto: R$ ${valor_d.toFixed(2)}`;
+
+        let preco_promocional = preco - valor_d
+        document.querySelector(".preco_promocional").innerHTML = `O preço promocional do produto: R$ ${preco_promocional.toFixed(2)}`;
+
+        document.body.style.textAlign = "center";
+        
+
+
+    </script>
+    
+</body>
+</html>
