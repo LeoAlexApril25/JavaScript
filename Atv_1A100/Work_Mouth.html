@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        body{
+            background-color: bisque;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgb(226, 156, 65);
+            padding: 20px;
+            margin: 220px 15px;
+        }
+
+        h1{
+            text-align: center;
+            color: azure;
+        }
+
+        p{
+            text-align: center;
+            color: azure;
+            text-shadow: 1px 2px 1px rgb(158, 28, 19);
+        }
+     </style>
+</head>
+<body>
+    <div>
+      <h1>Exercicio 15</h1>
+        <p class="Trabalho_Mes"></p>
+        <p class="h_TrabalhoD"></p>
+        <p class="Recebe_HoraDia"></p>
+    </div>
+
+    <script>
+        let Trabalho_Mes = Number.parseInt(prompt("Informe quantos dias voces trabalha por mes:"))
+        document.querySelector(".Trabalho_Mes").innerHTML = "Você trabalha " + Trabalho_Mes + " dias por mês.";
+
+        let h_TrabalhoD = 8
+        document.querySelector(".h_TrabalhoD").innerHTML = "Você trabalha por " + h_TrabalhoD + " dia."
+
+        let Recebe_HoraDia = 25
+        document.querySelector("Recebe_HoraDia").innerHTML = "Você Rrecebe por hora do seu trabalho R$" + Recebe_HoraDia + " por hora."
+
+
+
+    </script>
+    
+</body>
+</html>

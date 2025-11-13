@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: bisque;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgb(226, 156, 65);
+            padding: 20px;
+            margin: 220px 15px;
+            border-radius: 8px;
+        }
+
+        h1{
+            text-align: center;
+            color: azure;
+        }
+
+        p{
+            text-align: center;
+            color: azure;
+            text-shadow: 1px 2px 1px rgb(158, 28, 19);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+      <h1>Exercicio 16</h1>
+        <p class="Qtd_Cigarro"></p>
+        <p class="Qtd_anos"></p>
+        <p class="Total_Cigarros"></p>
+        <p class="Dias_Perdidos"></p>
+    </div>
+
+    <script>
+        let Qtd_Cigarro = Number.parseInt(prompt("Quantos Cigarros você fuma por dias ?"));
+        document.getElementsByClassName("Qtd_Cigarro")[0].innerHTML = "A quantidade de Cigarros que você fuma por dia é " + Qtd_Cigarro + " por dia."
+
+        let Qtd_anos = Number.parseInt(prompt("Quantos anos voce fuma ? "));
+        document.getElementsByClassName("Qtd_anos")[0].innerHTML = "A quantidade de anos que fumo é de aproxidamente " + Qtd_anos + " anos."
+
+
+        let Total_Cigarros = Qtd_Cigarro * 365 * Qtd_anos;
+        document.getElementsByClassName("Total_Cigarros")[0].innerHTML = "O Total de dias perdidos nesses anos que fumei foram de " + Total_Cigarros.toFixed(1) + " em todos esses anos."
+
+
+        let Dias_Perdidos =  (Total_Cigarros / 1440) * 10
+        document.getElementsByClassName("Dias_Perdidos")[0].innerHTML = "Esses foram o meus dias perdidos por causa do meu vício, onde foi " + Dias_Perdidos.toFixed(2) + " Total de dodas."
+
+    </script>
+    
+</body>
+</html>
