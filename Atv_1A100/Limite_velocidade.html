@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.2em;
+            font-weight: bold;
+            background-color: bisque;
+
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgb(226, 156, 65);
+            padding: 20px;
+            margin: 220px 15px;
+            border-radius: 8px;
+        }
+
+        h1{
+            text-align: center;
+            color: azure;
+        }
+        p{
+            text-align: center;
+            color: azure;
+            text-shadow: 1px 2px 1px rgb(158, 28, 19);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Exercicio 17</h1>
+          <p class="LimiteVelocidade"></p>
+          <p class="Usuario"></p>
+    </div>
+
+    <script>
+        let LimitSpeed = Number.parseFloat(prompt("Informe o limite de velocidade;"))
+        document.getElementsByClassName("LimiteVelocidade")[0].innerHTML = 'Sua velocidade foi ' + LimitSpeed.toFixed(2) + ' km percorridos.'
+
+        if (LimitSpeed > 80){
+            let Multa = (LimitSpeed - 80) * 5
+            document.getElementsByClassName("Usuario")[0].innerHTML = 'Você foi Multado em ' + Multa.toFixed(2) + ' pelos km percorridos.'
+        }
+        else{
+            document.getElementsByClassName("Usuario")[0].innerHTML = 'Você não foi multado, dirija com segurança!'
+        }
+    </script>
+
+    
+</body>
+</html>

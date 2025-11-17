@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightgray;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            color: cadetblue;
+        }
+
+        div{
+            width: 50%;
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5% ;
+            margin: 40% auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Exercicio 19</h1>
+        <p class="NotaAluno1"></p>
+        <p class="NotaAluno2"></p>
+        <p class="MediaFinal"></p>
+        <p class="PassouOuNao"></p>
+    </div>
+
+    <script>
+        let studentGrade = Number.parseFloat(prompt("Informe a nota do primeiro Aluno :"))
+        document.getElementsByClassName('NotaAluno1')[0].innerHTML = 
+        'A nota do primeiro aluno é ' + studentGrade.toFixed(2) + '.'
+
+        let studentGrade2 = Number.parseFloat(prompt("Informe a nota do segundo Aluno :"))
+        document.getElementsByClassName('NotaAluno2')[0].innerHTML =
+        'A nota do segundo aluno é ' + studentGrade2.toFixed(2) + '.'
+
+        let middle = (studentGrade + studentGrade2) / 2
+        document.getElementsByClassName('MediaFinal')[0].innerHTML = 
+        'A média final entre os dois alunos é ' + middle.toFixed(2) + '.'
+
+        if (middle >= 7){
+            document.getElementsByClassName('PassouOuNao')[0].innerHTML =
+            'O aluno passou de ano!'
+        }
+        else{
+            document.getElementsByClassName('PassouOuNao')[0].innerHTML =
+            'O aluno não passou de ano!'
+        }
+    </script>
+    
+</body>
+</html>

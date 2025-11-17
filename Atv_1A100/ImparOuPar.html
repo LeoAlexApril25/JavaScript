@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: lightblue;
+            color: navy;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        div{
+            width: 50%;
+            background-color: skyblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5% ;
+            margin: 40% auto;
+            border-radius: 8px;
+        }
+
+        form{
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label{
+            font-size: 1.2em;
+        }
+
+        input{
+            width: 30%;
+            font-size: 1em;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        button{
+            width: 20%;
+            font-size: 1em;
+            font-weight: bold;
+            background-color: navy;
+            color: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Exercicio 21</h1>
+        <p class="ImparOuPar"></p>
+
+
+        <form>
+
+        <label for="ImparOuPar">Escolha um numero</label>
+        <input type="text" id="ImparOuPar" name="Choice">
+        <button>Enviar</button>
+
+       
+       </form>
+
+       <script>
+        document.querySelector('button').addEventListener('click', function
+        (event){
+            event.preventDefault();
+            let NumberChoice = Number.parseInt(document.getElementById('ImparOuPar').value)
+
+            if (NumberChoice === 0){
+                document.getElementsByClassName('ImparOuPar')[0].innerHTML =
+                'O numero 0 não é par nem ímpar!'
+            }
+            else if (NumberChoice % 2 === 0){
+                document.getElementsByClassName('ImparOuPar')[0].innerHTML =
+                'O numero ' + NumberChoice + ' é par!'
+            }
+            else{
+                document.getElementsByClassName('ImparOuPar')[0].innerHTML =
+                'O numero ' + NumberChoice + ' é impar!'
+            }
+        }
+    )
+       </script>
+    </div>
+
+    
+</body>
+</html>

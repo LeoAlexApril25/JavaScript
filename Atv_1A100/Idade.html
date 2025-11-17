@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: brown;
+            color: rgb(185, 161, 20);
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            background-color: rgb(170, 75, 11);
+            padding: 20px 20%;
+            margin: 220px 15px;
+            border-radius: 8px;
+        }
+
+        div :hover{
+            background-color: gold;
+            color: coral;
+            border-radius: 8px;
+            transition: 0.5s;
+            text-decoration: underline;
+        }
+
+        h1{
+            text-align: center;
+            color: azure;
+        }
+
+        p{
+            text-align: center;
+            color: azure;
+            text-shadow: 1px 2px 1px rgb(158, 28, 19);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+       <h1>Exercicio 18</h1>
+         <p class="DataNascimento"></p>
+         <p class="Idade"></p>
+         <p class="VotarOuAindaNao"></p>
+    </div>
+     
+    <script>
+        let DateBorn = Number.parseInt(prompt("Informe a data de nascimento"));
+        document.getElementsByClassName("DataNascimento")[0].innerHTML = "Sua data de nascimento é " + DateBorn + ".";
+
+        let CurrentYear = new Date().getFullYear();
+        let Age = CurrentYear - DateBorn;
+        document.getElementsByClassName("Idade")[0].innerHTML = 'Sua idade é de ' + Age + ' .'
+        
+        if (Age >= 16){
+            document.getElementsByClassName('VotarOuAindaNao')[0].innerHTML =
+            'Você já pode votar nas próximas eleições.'
+
+        }
+        else{
+            document.getElementsByClassName('VotarOuAindaNao')[0].innerHTML =
+            'Você ainda não pode votar nas próximas eleições.'
+        }
+    </script>
+    
+</body>
+</html>
