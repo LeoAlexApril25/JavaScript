@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: lightgreen;
+            color: darkgreen;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        div{
+            width: 90%;
+            max-width: 500px;
+            padding: 2rem;
+            background-color: darkorange;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        form{
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+
+        label{
+            font-size: 1.2em;
+        }
+
+        input{
+            width: 30%;
+            font-size: 1em;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        button{
+            width: 20%;
+            font-size: 1em;
+            font-weight: bold;
+            background-color: darkgreen;
+            color: white;
+            border-radius: 8px;
+            margin: 2%;
+
+
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1>Exercicio 21</h1>
+        <p class="AnoBissexto"></p>
+
+        <form>
+            <label for="Year">Informe o ano :</label>
+            <input type="text" id="Year" name="Year">
+            <button>Salvar</button>
+        </form>
+
+        <script>
+            document.querySelector('button').addEventListener('click', function (event){
+                event.preventDefault();
+                let Year = Number.parseInt(
+                    document.getElementById('Year').value
+                )
+
+                if ( (Year % 4 === 0 && Year % 100 !== 0) || (Year % 400 === 0) ) {
+                    document.getElementsByClassName('AnoBissexto')[0].innerHTML = 
+                    'O ano de ' + Year + ' é bissexto.'
+                }
+
+                else{
+                    document.getElementsByClassName('AnoBissexto')[0].innerHTML =
+                    'O ano de ' + Year + ' não é bissexto.'
+                }
+
+            })
+        </script>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        input {
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        button {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 500px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercicio 24</h1>
+    <p class="nome"></p>
+    <p class="sexo"></p>
+    <p class="Preco"></p>
+    
+
+
+    <form action="">
+        <input type="text" name="nome" id="nome" placeholder="Informe o nome">
+        <input type="text" name="sexo" id="sexo" placeholder="Informe o sexo (Masculino/Feminino)">
+        <input type="number" name="Preco" id="Preco" placeholder="Informe o preço">
+        <button type="button" onclick="">Verificar</button>
+    </form>
+
+    <script>
+        document.querySelector('button').addEventListener('click', function(event){
+            event.preventDefault();
+            let nome = document.getElementById('nome').value
+            document.getElementsByClassName('nome')[0].innerHTML = 'Nome do cliente é ' + nome + '.'
+            let sexo = document.getElementById('sexo').value
+            document.getElementsByClassName('sexo')[0].innerHTML = 'Sexo do cliente é ' + sexo + '.'
+            let preco = Number.parseFloat(document.getElementById('Preco').value)
+            
+            if (sexo === 'Masculino'){
+                let DescontoM = preco * 0.13
+                document.getElementsByClassName('Preco')[0].innerHTML = 'O preço com desconto é de ' + (preco - DescontoM).toFixed(2) + ' Reais.'
+            }
+            else if (sexo ==='Feminino'){
+                let DescontoF = preco * 0.17
+                document.getElementsByClassName('Preco')[0].innerHTML = 'O preço com desconto é de ' + (preco - DescontoF).toFixed(2) + ' Reais.'
+            }
+            
+            // Esconde o formulário
+            document.querySelector('form').style.display = 'none';
+        })
+    </script>
+    
+    
+</body>
+</html>

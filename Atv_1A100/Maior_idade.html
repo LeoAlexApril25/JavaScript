@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightblue;
+            color: darkblue;
+        }
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            font-size: 1.2em;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        label{
+            font-size: 1.2em;
+        }
+
+        input{
+            width: 30%;
+            font-size: 1em;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        button{
+            width: 20%;
+            font-size: 1em;
+            font-weight: bold;
+            background-color: darkblue;
+            color: white;
+            border-radius: 8px;
+            margin: 2%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Exercicio 22</h1>
+      <form action="">
+        <label for="Ano">Informe o ano do seu nascimento:</label>
+        <input type="text" id="Ano" name="Ano" placeholder="Ex: 2005">
+        <button type="button" onclick="verificar()">Verificar</button>
+      </form>
+
+    <p class="Ano_N"></p>
+    <p class="MenorI"></p>
+    <p class="MaiorI"></p>
+
+    <script>
+        function verificar(){
+            let YearBorn = Number.parseInt(document.querySelector('#Ano').value)
+            
+            if(isNaN(YearBorn)){
+                alert('Por favor, informe um ano válido!')
+                return
+            }
+
+            document.querySelector('.Ano_N').innerHTML = 'O ano de nascimento do rapaz é ' + YearBorn + ' . '
+
+            let CurrentYear = new Date().getFullYear();
+            let Age = CurrentYear - YearBorn;
+
+            // Limpar mensagens anteriores
+            document.querySelector('.MenorI').innerHTML = ''
+            document.querySelector('.MaiorI').innerHTML = ''
+
+            if( Age < 18){
+                document.querySelector('.MenorI').innerHTML = 'O rapaz é menor de idade.'
+            } else{
+                document.querySelector('.MaiorI').innerHTML = 'O rapaz é maior de idade.'
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(135deg, #5f9ea0, #4682b4); /* Cria um gradiente diagonal de azul-acinzentado para azul-aço */
+            text-align: center; /* Centraliza todo o texto */
+            min-height: 100vh; /* Garante altura mínima de 100% da tela */
+            margin: 0; /* Remove margens padrão do navegador */
+            display: flex; /* Ativa o flexbox */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+        }
+        div{
+            padding: 30px; /* Espaçamento interno de 30px */
+            margin: 20px; /* Margem externa de 20px */
+            border-radius: 15px; /* Bordas arredondadas */
+            font-family: Arial, Helvetica, sans-serif; /* Define a fonte */
+            background-color: rgba(255, 255, 255, 0.95); /* Fundo branco com 95% de opacidade */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra: sem deslocamento horizontal, 10px vertical, 30px de blur, cor preta com 20% opacidade */
+            max-width: 500px; /* Largura máxima de 500px */
+            width: 90%; /* Largura de 90% da tela em dispositivos menores */
+        }
+        h1 {
+            color: #2c3e50; /* Cor azul-escura para o título */
+            margin-bottom: 20px; /* Margem inferior de 20px */
+            font-size: 2rem; /* Tamanho da fonte 2 vezes o tamanho padrão */
+        }
+        form{
+            background-color: #f8f9fa; /* Fundo cinza muito claro */
+            padding: 25px; /* Espaçamento interno de 25px */
+            border-radius: 12px; /* Bordas arredondadas */
+            gap: 15px; /* Espaçamento entre elementos filhos do flexbox */
+            display: flex; /* Ativa o flexbox */
+            justify-content: center; /* Centraliza horizontalmente */
+            flex-direction: column; /* Organiza elementos em coluna */
+            align-items: center; /* Centraliza verticalmente */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            margin-top: 20px; /* Margem superior de 20px */
+        }
+        label {
+            font-weight: bold; /* Texto em negrito */
+            color: #34495e; /* Cor azul-acinzentada escura */
+            font-size: 1.1rem; /* Tamanho da fonte 1.1 vezes o padrão */
+        }
+        input{
+            text-align: center; /* Centraliza o texto digitado */
+            border-radius: 8px; /* Bordas arredondadas */
+            padding: 12px; /* Espaçamento interno de 12px */
+            border: 2px solid #ddd; /* Borda sólida de 2px cinza clara */
+            font-size: 1rem; /* Tamanho da fonte padrão */
+            width: 250px; /* Largura fixa de 250px */
+            transition: border-color 0.3s ease; /* Animação suave na mudança da cor da borda em 0.3 segundos */
+        }
+        input:focus {
+            outline: none; /* Remove o contorno padrão do navegador */
+            border-color: rgb(84, 153, 136); /* Muda a cor da borda para verde quando focado */
+        }
+        button{
+            color: white; /* Texto branco */
+            border-radius: 12px; /* Bordas arredondadas */
+            background: linear-gradient(45deg, rgb(84, 153, 136), rgb(64, 133, 116)); /* Gradiente diagonal de verde claro para verde escuro */
+            width: 100px; /* Largura fixa de 100px */
+            padding: 12px; /* Espaçamento interno de 12px */
+            border: none; /* Remove a borda padrão */
+            font-size: 1rem; /* Tamanho da fonte padrão */
+            font-weight: bold; /* Texto em negrito */
+            cursor: pointer; /* Muda o cursor para "mãozinha" ao passar por cima */
+            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animação suave para transformação e sombra */
+        }
+        button:hover {
+            transform: translateY(-2px); /* Move o botão 2px para cima quando o mouse passa por cima */
+            box-shadow: 0 5px 15px rgba(84, 153, 136, 0.4); /* Adiciona sombra verde com 40% de opacidade */
+        }
+        p {
+            font-size: 1.2rem; /* Tamanho da fonte 1.2 vezes o padrão */
+            color: #2c3e50; /* Cor azul-escura */
+            font-weight: bold; /* Texto em negrito */
+            margin: 10px 0; /* Margem superior e inferior de 10px */
+            padding: 15px; /* Espaçamento interno de 15px */
+            background-color: #e8f5e8; /* Fundo verde muito claro */
+            border-radius: 8px; /* Bordas arredondadas */
+            border-left: 4px solid rgb(84, 153, 136); /* Borda esquerda sólida verde de 4px */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Exercicio 25</h1>
+        <p class="ViagemC"></p>
+        <p class="ViagemL"></p>
+
+        <form action="">
+            <label for="KM">Informe o Km</label>
+            <input type="text" id="KM" name="KM" placeholder="Escreva Km percorridos">
+            <button type="button">Enviar</button>
+        </form>
+
+        <script>
+            document.querySelector('button').addEventListener('click', function(event){
+                event.preventDefault();
+                let km = parseFloat(document.querySelector('#KM').value);
+                 if (km <= 200){
+                    let PrecoC = km * 0.50
+                    document.querySelector('.ViagemC').innerHTML = 
+                    `O preço da viagem de ${km} Km é de R$ ${PrecoC.toFixed(2)}`
+                 } else {
+                    let PrecoL = km * 0.45
+                    document.querySelector('.ViagemL').innerHTML = 
+                    ' O preço da de ' + km + ' Km é de R$ ' + PrecoL.toFixed(2)
+                 }
+                
+                document.querySelector('form').style.display = 'none';
+
+            })
+            
+
+        </script>
+    </div>
+    
+</body>
+</html>
